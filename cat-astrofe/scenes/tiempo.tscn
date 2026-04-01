@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://blvywm8cx44ms"]
+
+[ext_resource type="Script" uid="uid://dp1e67hdfynm6" path="res://scripts/timer.gd" id="1_engs8"]
+[ext_resource type="Texture2D" uid="uid://dh0s8b0w8koyf" path="res://assets/sprites/unique/timer.png" id="2_5lxq6"]
+[ext_resource type="FontFile" uid="uid://dvuiww3cf20cm" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_u1u1y"]
+[ext_resource type="AudioStream" uid="uid://c8cttgi6pbq1" path="res://assets/sounds/music/SeeingDouble.wav" id="4_wh3vr"]
+
+[node name="Node2D" type="Node2D" unique_id=1402843872]
+script = ExtResource("1_engs8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=369564517]
+position = Vector2(172, 58)
+scale = Vector2(0.26344547, 0.26344547)
+texture = ExtResource("2_5lxq6")
+
+[node name="timer_label" type="Label" parent="." unique_id=1130553962]
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 403.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("3_u1u1y")
+theme_override_font_sizes/font_size = 80
+text = "0:00"
+
+[node name="musica" type="AudioStreamPlayer2D" parent="." unique_id=222029259]
+stream = ExtResource("4_wh3vr")
+volume_db = -10.355
+autoplay = true
+
+[connection signal="finished" from="musica" to="." method="_on_musica_finished"]

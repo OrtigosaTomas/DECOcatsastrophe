@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cm3lj3t08anc1"]
+
+[ext_resource type="Script" uid="uid://d25w6yth3ldmw" path="res://scripts/area_wall.gd" id="1_3uj3h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uj3h"]
+size = Vector2(10.382933, 29.800003)
+
+[node name="AreaWall" type="Area2D" unique_id=1746044962]
+z_index = 5
+scale = Vector2(25, 70)
+collision_layer = 4
+collision_mask = 172
+script = ExtResource("1_3uj3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=837605221]
+position = Vector2(0, 9.957143)
+shape = SubResource("RectangleShape2D_3uj3h")

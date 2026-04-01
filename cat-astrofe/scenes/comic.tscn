@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cg0iewiq4dory"]
+
+[ext_resource type="Texture2D" uid="uid://8isvh8ql3kln" path="res://assets/backgrounds/background.png" id="1_vuijb"]
+[ext_resource type="Script" uid="uid://dwqeb3okh6bff" path="res://scripts/comic.gd" id="1_w6byc"]
+[ext_resource type="Texture2D" uid="uid://dh2mjk4ad254y" path="res://assets/sprites/unique/comic4.png" id="2_w6byc"]
+[ext_resource type="Texture2D" uid="uid://dobkiuwrsway8" path="res://assets/sprites/unique/comic3.png" id="3_a1yvj"]
+[ext_resource type="Texture2D" uid="uid://ca6j3mvdrnwi2" path="res://assets/sprites/unique/comic2.png" id="4_p1cgm"]
+[ext_resource type="Texture2D" uid="uid://djw2l8s1ihb8p" path="res://assets/sprites/unique/comic1.png" id="5_jppfe"]
+[ext_resource type="AudioStream" uid="uid://b1mcae6cbrgv5" path="res://assets/sounds/music/River Dance.wav" id="7_a1yvj"]
+[ext_resource type="FontFile" uid="uid://dvuiww3cf20cm" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_p1cgm"]
+[ext_resource type="Texture2D" uid="uid://b1a6q0vpw0db6" path="res://assets/sprites/unique/control.png" id="9_jppfe"]
+
+[node name="Control" type="Control" unique_id=1708868689]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w6byc")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1514304914]
+position = Vector2(996, 379)
+scale = Vector2(0.7199988, 0.7199988)
+texture = ExtResource("1_vuijb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=728879003]
+position = Vector2(969.99994, 397.00003)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_jppfe")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1001226349]
+position = Vector2(971.99994, 392)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_p1cgm")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=961044673]
+position = Vector2(972.99994, 401)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_a1yvj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=461549404]
+position = Vector2(971.99994, 394)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_w6byc")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1015394880]
+layout_mode = 0
+offset_left = 1750.0
+offset_top = 25.000004
+offset_right = 1790.0
+offset_bottom = 65.00001
+scale = Vector2(3.7511277, 2.3669245)
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="." unique_id=582249762]
+texture_filter = 2
+layout_mode = 0
+offset_left = 1755.0
+offset_top = 52.0
+offset_right = 1894.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("7_p1cgm")
+theme_override_font_sizes/font_size = 35
+text = "Skip"
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1831693783]
+position = Vector2(970, 408)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=141759813]
+stream = ExtResource("7_a1yvj")
+autoplay = true
+
+[node name="controles" type="Sprite2D" parent="." unique_id=136394258]
+position = Vector2(340, 319)
+scale = Vector2(0.2887452, 0.2887452)
+texture = ExtResource("9_jppfe")
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

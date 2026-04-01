@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://daqbdsdhpmchw"]
+
+[ext_resource type="Script" uid="uid://b5r0051tu20dt" path="res://scripts/area_floor.gd" id="1_s88tu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yut6t"]
+size = Vector2(12.80817, 13.276199)
+
+[node name="AreaFloor" type="Area2D" unique_id=1746044962]
+z_index = 5
+scale = Vector2(25, 50)
+collision_layer = 4
+collision_mask = 172
+script = ExtResource("1_s88tu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1254477250]
+shape = SubResource("RectangleShape2D_yut6t")

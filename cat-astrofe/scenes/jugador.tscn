@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bw3xr010nrtq7"]
+
+[ext_resource type="Script" uid="uid://drfry3vkae5ku" path="res://scripts/jugador.gd" id="1_lhlt4"]
+[ext_resource type="Texture2D" uid="uid://e2q4ig7tt6w0" path="res://assets/sprites/deco-cat/player.png" id="3_28edd"]
+[ext_resource type="AudioStream" uid="uid://rgvmat18uj6v" path="res://assets/sounds/fx/2-foot-step.wav" id="3_k64kw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhlt4"]
+atlas = ExtResource("3_28edd")
+region = Rect2(0, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5m57"]
+atlas = ExtResource("3_28edd")
+region = Rect2(1440, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lqtn"]
+atlas = ExtResource("3_28edd")
+region = Rect2(1800, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auomn"]
+atlas = ExtResource("3_28edd")
+region = Rect2(2160, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdyqb"]
+atlas = ExtResource("3_28edd")
+region = Rect2(2520, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pedm"]
+atlas = ExtResource("3_28edd")
+region = Rect2(2880, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gynwn"]
+atlas = ExtResource("3_28edd")
+region = Rect2(360, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm55e"]
+atlas = ExtResource("3_28edd")
+region = Rect2(720, 0, 360, 727)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qimqe"]
+atlas = ExtResource("3_28edd")
+region = Rect2(1080, 0, 360, 727)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qimn5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhlt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5m57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lqtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auomn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdyqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pedm")
+}],
+"loop": true,
+"name": &"corro",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gynwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm55e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qimqe")
+}],
+"loop": true,
+"name": &"quieto",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k64kw"]
+size = Vector2(9.8766575, 20.397125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhlt4"]
+size = Vector2(479.99734, 330.9176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28edd"]
+size = Vector2(2195.005, 6536.3916)
+
+[node name="player" type="CharacterBody2D" unique_id=1974998430]
+z_index = 10
+script = ExtResource("1_lhlt4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=401276990]
+position = Vector2(7.395981, 59.949677)
+scale = Vector2(0.9021999, 0.9021999)
+sprite_frames = SubResource("SpriteFrames_qimn5")
+animation = &"corro"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1283497441]
+z_index = 5
+position = Vector2(17, -47.512573)
+scale = Vector2(10.873716, 37.50405)
+shape = SubResource("RectangleShape2D_k64kw")
+
+[node name="grab_area" type="Area2D" parent="." unique_id=500454808]
+position = Vector2(5.3959866, 220.94962)
+scale = Vector2(1.1354237, 1.299418)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grab_area" unique_id=278804670]
+position = Vector2(0.09160185, -3.0395203)
+scale = Vector2(0.99999934, 0.99999917)
+shape = SubResource("RectangleShape2D_lhlt4")
+debug_color = Color(0, 0.6509804, 0.09019608, 0.19607843)
+
+[node name="valid_place_area" type="Area2D" parent="." unique_id=1606693938]
+position = Vector2(-17.000002, -144)
+scale = Vector2(0.2262783, 0.10532714)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="valid_place_area" unique_id=789860236]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(85.00018, 1289.0359)
+scale = Vector2(0.99999976, 0.9999997)
+shape = SubResource("RectangleShape2D_28edd")
+debug_color = Color(0.9647059, 0.050980393, 0.46666667, 0.17254902)
+
+[node name="CursorJointNode" type="Node2D" parent="." unique_id=457726096]
+position = Vector2(-23, -311)
+
+[node name="pasos" type="AudioStreamPlayer2D" parent="." unique_id=1816900997]
+unique_name_in_owner = true
+stream = ExtResource("3_k64kw")
