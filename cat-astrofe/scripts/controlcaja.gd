@@ -11,6 +11,9 @@ var decoSc = 1
 var winCon = 0
 var destruccion = false
 var tiempoTranscurrido = 0
+var wallAgarrado = false
+var standAgarrado = false
+var floorAgarrado = false
 
 func setPlacedDeco(nombreDeco):
 	deco.append(nombreDeco)
@@ -52,6 +55,7 @@ var scenes = [
 ]
 
 func reset_data():
+	deco = []
 	max_spawns_per_category = [7, 3, 2]
 	current_spawns_per_category = [0, 0, 0]
 	total_max_spawns = 12
@@ -60,6 +64,9 @@ func reset_data():
 	decoWc = 1
 	decoSc = 1
 	winCon = 0
+	wallAgarrado = false
+	standAgarrado = false
+	floorAgarrado = false
 
 func spawn_scene():
 	if total_spawns >= total_max_spawns:

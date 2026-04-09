@@ -243,6 +243,7 @@ z_index = 15
 script = ExtResource("1_0d640")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1782907392]
+position = Vector2(-0.7000351, -20.300022)
 scale = Vector2(0.19999987, 0.19999987)
 sprite_frames = SubResource("SpriteFrames_sqcv2")
 animation = &"idle"
@@ -250,16 +251,17 @@ autoplay = "walk"
 flip_h = true
 
 [node name="RayoDerecha" type="RayCast2D" parent="." unique_id=327506657]
-position = Vector2(0, 5)
+position = Vector2(-0.7000351, -15.300022)
 target_position = Vector2(9, 0)
 collision_mask = 16
 
 [node name="RayoIzquierda" type="RayCast2D" parent="." unique_id=1538446326]
-position = Vector2(0, 5)
+position = Vector2(-0.7000351, -15.300022)
 target_position = Vector2(-9, 0)
 collision_mask = 16
 
 [node name="Detector" type="Area2D" parent="." unique_id=779397012]
+position = Vector2(-0.7000351, -20.300022)
 scale = Vector2(164.28395, 11.154326)
 collision_layer = 128
 collision_mask = 223
@@ -272,11 +274,12 @@ shape = SubResource("RectangleShape2D_0d640")
 debug_color = Color(0.827451, 0, 0.19607843, 0.1254902)
 
 [node name="RayoSuelo" type="RayCast2D" parent="." unique_id=147750168]
-position = Vector2(0, 10)
+position = Vector2(-0.7000351, -10.300022)
 rotation = 1.5759535
 target_position = Vector2(9, 0)
 collision_mask = 16
 
 [node name="miau" type="AudioStreamPlayer2D" parent="." unique_id=77427667]
+position = Vector2(-0.7000351, -20.300022)
 stream = ExtResource("3_85aii")
 volume_db = 10.355

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://daqbdsdhpmchw"]
 
 [ext_resource type="Script" uid="uid://b5r0051tu20dt" path="res://scripts/area_floor.gd" id="1_s88tu"]
+[ext_resource type="Texture2D" uid="uid://cvuvsiwtvj7mw" path="res://assets/sprites/unique/tile1.png" id="2_yut6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yut6t"]
 size = Vector2(12.80817, 13.276199)
@@ -14,3 +15,9 @@ script = ExtResource("1_s88tu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1254477250]
 shape = SubResource("RectangleShape2D_yut6t")
+
+[node name="debugB" type="Sprite2D" parent="." unique_id=1872215211]
+modulate = Color(1, 0.18431373, 0.22745098, 0.19607843)
+position = Vector2(0.07999995, 0.17999983)
+scale = Vector2(0.014778092, 0.015588613)
+texture = ExtResource("2_yut6t")

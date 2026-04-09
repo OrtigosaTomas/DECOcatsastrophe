@@ -95,6 +95,7 @@ collision_mask = 255
 script = ExtResource("1_r3oqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1493178639]
+position = Vector2(0.09805973, -5.789591)
 scale = Vector2(0.04583514, 0.04583514)
 sprite_frames = SubResource("SpriteFrames_ilasi")
 animation = &"apertura"
@@ -102,8 +103,10 @@ autoplay = "cerrada"
 frame_progress = 0.80115896
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=337679879]
-position = Vector2(-0.5, 1.5)
+position = Vector2(-0.4019403, -4.289591)
 shape = SubResource("RectangleShape2D_g2cyc")
 
 [node name="sonidoCaja" type="AudioStreamPlayer2D" parent="." unique_id=1502762623]
+z_index = 5
+position = Vector2(0.09805973, -5.789591)
 stream = ExtResource("3_xavj2")

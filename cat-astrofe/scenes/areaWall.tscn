@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cm3lj3t08anc1"]
 
 [ext_resource type="Script" uid="uid://d25w6yth3ldmw" path="res://scripts/area_wall.gd" id="1_3uj3h"]
+[ext_resource type="Texture2D" uid="uid://cvuvsiwtvj7mw" path="res://assets/sprites/unique/tile1.png" id="2_7846l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uj3h"]
 size = Vector2(10.382933, 29.800003)
@@ -15,3 +16,9 @@ script = ExtResource("1_3uj3h")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=837605221]
 position = Vector2(0, 9.957143)
 shape = SubResource("RectangleShape2D_3uj3h")
+
+[node name="debugB" type="Sprite2D" parent="." unique_id=542717174]
+modulate = Color(1, 0.18431373, 0.22745098, 0.19607843)
+position = Vector2(0.44000077, 1.742857)
+scale = Vector2(0.012785944, 0.014581881)
+texture = ExtResource("2_7846l")

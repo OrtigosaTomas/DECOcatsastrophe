@@ -94,6 +94,7 @@ scale = Vector2(19.348043, 35.240005)
 script = ExtResource("1_moja7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1493178639]
+position = Vector2(-1.1047598, -4.056799)
 rotation = -1.5702529
 scale = Vector2(0.034172297, 0.046034608)
 sprite_frames = SubResource("SpriteFrames_ilasi")
@@ -101,8 +102,10 @@ animation = &"cerrada"
 autoplay = "cerrada"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=337679879]
-position = Vector2(-0.5, 1.5)
+position = Vector2(-1.6047597, -2.556799)
 shape = SubResource("RectangleShape2D_g2cyc")
 
 [node name="sonidoCaja" type="AudioStreamPlayer2D" parent="." unique_id=2021144739]
+z_index = 5
+position = Vector2(-1.1047597, -4.056799)
 stream = ExtResource("3_jgddv")

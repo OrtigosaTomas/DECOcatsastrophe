@@ -121,7 +121,7 @@ func obtener_target_mas_cercano() -> Node:
 
 func _buscar_objetivo(delta):
 	var nuevo_target = obtener_target_mas_cercano()
-	if nuevo_target != null:
+	if nuevo_target != null and nuevo_target.colocado ==true:
 		print("miau(objetivo detectado)")
 		target = nuevo_target
 		var dist = position.distance_to(target.position)

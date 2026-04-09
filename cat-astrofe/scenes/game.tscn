@@ -69,20 +69,19 @@ animations = [{
 }]
 
 [node name="Game" type="Node2D" unique_id=41755661]
+
+[node name="Ysort" type="Node2D" parent="." unique_id=1338991062]
+z_index = 5
 y_sort_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70030027]
-position = Vector2(-57, 349)
-scale = Vector2(0.818356, 0.7200027)
-texture = ExtResource("1_iywne")
-
-[node name="gato" parent="." unique_id=971820153 instance=ExtResource("1_yqjtg")]
+[node name="gato" parent="Ysort" unique_id=971820153 instance=ExtResource("1_yqjtg")]
 unique_name_in_owner = true
 visibility_layer = 1
+z_index = 5
 position = Vector2(226.00002, 842.00006)
 scale = Vector2(4.2258224, 4.2258224)
 
-[node name="player" parent="." unique_id=1974998430 instance=ExtResource("2_lnu2h")]
+[node name="player" parent="Ysort" unique_id=1974998430 instance=ExtResource("2_lnu2h")]
 unique_name_in_owner = true
 visibility_layer = 2
 z_index = 5
@@ -90,7 +89,7 @@ texture_filter = 1
 position = Vector2(-36.99994, 460)
 scale = Vector2(1.0092943, 1.0092943)
 
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=1031723324]
+[node name="Camera2D" type="Camera2D" parent="Ysort/player" unique_id=1031723324]
 position = Vector2(0, -106.01466)
 zoom = Vector2(0.9, 0.9)
 limit_left = -1360
@@ -99,6 +98,19 @@ limit_right = 1250
 limit_bottom = 970
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="cajas" type="Node" parent="Ysort" unique_id=1813389668]
+script = ExtResource("6_u5sy4")
+
+[node name="box1" parent="Ysort/cajas" unique_id=1604722691 instance=ExtResource("3_lnu2h")]
+z_index = 5
+position = Vector2(958.00006, 590.00006)
+scale = Vector2(24.959995, 24.959995)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70030027]
+position = Vector2(-57, 349)
+scale = Vector2(0.818356, 0.7200027)
+texture = ExtResource("1_iywne")
 
 [node name="paredes" type="Node" parent="." unique_id=1159559775]
 
@@ -240,15 +252,6 @@ position = Vector2(400.99997, 307)
 scale = Vector2(0.79999876, 0.79999876)
 sprite_frames = SubResource("SpriteFrames_dinhu")
 animation = &"new_animation_1"
-
-[node name="cajas" type="Node" parent="." unique_id=1813389668]
-script = ExtResource("6_u5sy4")
-
-[node name="box1" parent="cajas" unique_id=1604722691 instance=ExtResource("3_lnu2h")]
-z_index = 2
-y_sort_enabled = true
-position = Vector2(958.00006, 590.00006)
-scale = Vector2(24.959995, 24.959995)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=968107568]
 offset = Vector2(-50, 100)

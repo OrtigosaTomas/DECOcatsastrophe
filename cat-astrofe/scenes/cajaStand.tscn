@@ -94,14 +94,17 @@ scale = Vector2(12.139988, 16.186687)
 script = ExtResource("1_1wyhf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1493178639]
+position = Vector2(0.24928914, -6.0096936)
 scale = Vector2(0.062309623, 0.04583514)
 sprite_frames = SubResource("SpriteFrames_ilasi")
 animation = &"apertura"
 autoplay = "cerrada"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=337679879]
-position = Vector2(-0.5, 1.5)
+position = Vector2(-0.25071087, -4.5096936)
 shape = SubResource("RectangleShape2D_g2cyc")
 
 [node name="sonidoCaja" type="AudioStreamPlayer2D" parent="." unique_id=246801616]
+z_index = 5
+position = Vector2(0.24928913, -6.0096936)
 stream = ExtResource("3_2tdmt")

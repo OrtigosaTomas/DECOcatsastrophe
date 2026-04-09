@@ -61,6 +61,12 @@ func _process(_delta):
 					pin_joint.position = body.global_position
 					get_parent().add_child(pin_joint)
 					body.agarrado = true
+					if body.name.begins_with("decoFloor"):
+						controlcajas.floorAgarrado = true
+					if body.name.begins_with("decoWall"):
+						controlcajas.wallAgarrado = true
+					if body.name.begins_with("decoStand"):
+						controlcajas.standAgarrado = true
 					break
 			else:
 				if pin_joint:
@@ -69,10 +75,13 @@ func _process(_delta):
 				grabbed_object.collision_mask = 4
 				grabbed_object.collision_layer = 4
 				grabbed_object.agarrado = false
+				controlcajas.wallAgarrado = false
+				controlcajas.floorAgarrado = false
+				controlcajas.standAgarrado = false
 				grabbed_object = null
 
 	if grabbed_object != null and not grabbed_object.colocado:
-		grabbed_object.global_position = global_position + Vector2(50, -400)
+		grabbed_object.global_position = global_position + Vector2(50, -700)
 
 func _on_place_object(body, pos):
 	if pin_joint:
@@ -91,6 +100,9 @@ func _on_place_object(body, pos):
 	grabbed_object.angular_velocity = 0
 	grabbed_object.z_index = 3
 	grabbed_object.agarrado = false
+	controlcajas.wallAgarrado = false
+	controlcajas.floorAgarrado = false
+	controlcajas.standAgarrado = false
 	controlcajas.incWin()
 	controlcajas.setPlacedDeco(grabbed_object.name)
 	print("Objeto colocado ", body.name)

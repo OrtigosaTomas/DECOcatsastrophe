@@ -13,6 +13,9 @@ config_version=5
 config/name="Deco CATastrophe"
 run/main_scene="uid://pxfxl0cw7j46"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0.9529412, 0.6509804, 0.74509805, 1)
+boot_splash/stretch_mode=2
+boot_splash/image="uid://by1e2gafc1i1r"
 config/icon="uid://bomqqjta7rrao"
 
 [audio]

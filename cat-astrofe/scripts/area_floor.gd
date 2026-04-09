@@ -3,22 +3,39 @@ extends Area2D
 var bodies_in_area := []
 var areaOcupada = false
 @onready var player: CharacterBody2D = %player
+@onready var debug_b: Sprite2D = $debugB
 var bodyColocado = null
 var colocadoFound = false
+var placeFound = false
 
 func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))
 	connect("body_exited", Callable(self, "_on_body_exited"))
 
 func _on_body_entered(body: Node) -> void:
+	if body.name.begins_with("decoFloor") and body.agarrado == true:
+		placeFound = true
 	if body.name.begins_with("decoFloor") and body.colocado == false:
 		bodies_in_area.append(body)
 
 func _on_body_exited(body: Node) -> void:
+	if body.name.begins_with("decoFloor") and body.agarrado == true:
+		placeFound = false
 	if body.name.begins_with("decoFloor"):
 		bodies_in_area.erase(body)
 
 func _process(_delta: float) -> void:
+	
+	if controlcajas.floorAgarrado == true and areaOcupada == false:
+		debug_b.visible = true
+	else:
+		debug_b.visible = false
+	
+	if placeFound == true:
+		debug_b.modulate = Color(0.0, 15.514, 0.0, 1.0)
+	else:
+		debug_b.modulate = Color("e50026ff")
+	
 	if not areaOcupada:
 		if Input.is_action_just_pressed("interact"):
 			for body in bodies_in_area:
@@ -32,13 +49,11 @@ func _process(_delta: float) -> void:
 					break
 		return
 
-	if areaOcupada and bodyColocado != null:
+	if areaOcupada != null:
 		var placed_bodies = controlcajas.getPlacedDeco()
 		if bodyColocado in placed_bodies:
-			# El objeto sigue colocado, no hacer nada
 			pass
 		else:
-			# El objeto ya no está colocado, limpiar estado
 			areaOcupada = false
 			for body in bodies_in_area.duplicate():
 				if body.name == bodyColocado:
