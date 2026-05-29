@@ -7,7 +7,7 @@ func _on_timer_finished():
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _ready():
-	
+
 	var timer = Timer.new()
 	timer.wait_time = 10
 	timer.one_shot = true
@@ -16,6 +16,7 @@ func _ready():
 	timer.timeout.connect(_on_timer_finished)
 	@warning_ignore("integer_division")
 	time_left = controlcajas.tiempoTranscurrido
+	controlcajas.tiempoTranscurrido = 0
 	var minutes = time_left / 60
 	var seconds = time_left % 60
 	label.text = "%2d:%02d" % [minutes, seconds]

@@ -29,20 +29,20 @@ texture = ExtResource("2_yxbqr")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1402476410]
 layout_mode = 0
-offset_left = 1743.0
-offset_top = 28.000002
-offset_right = 1783.0
-offset_bottom = 68.0
+offset_left = 911.0
+offset_top = 805.0
+offset_right = 951.0
+offset_bottom = 845.0
 scale = Vector2(3.7511277, 2.3669245)
 color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Button" parent="." unique_id=219004251]
 texture_filter = 2
 layout_mode = 0
-offset_left = 1748.0
-offset_top = 53.0
-offset_right = 1887.0
-offset_bottom = 97.0
+offset_left = 916.0
+offset_top = 807.0
+offset_right = 1060.0
+offset_bottom = 901.0
 theme_override_fonts/font = ExtResource("3_tylv2")
 theme_override_font_sizes/font_size = 35
 text = "Exit"

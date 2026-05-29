@@ -6,11 +6,15 @@ extends Control
 @onready var sprite_2d_3: Sprite2D = $Sprite2D3
 @onready var sprite_2d_2: Sprite2D = $Sprite2D2
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var controles: Sprite2D = $controles
 
 func _on_timer_finished():
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 func _ready():
+	
+	if OS.get_name() == "Android":
+		controles.visible = false
 	
 	var timer = Timer.new()
 	timer.wait_time = 25.0

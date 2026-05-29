@@ -6,6 +6,7 @@ func _on_timer_finished():
 func _ready():
 	controlcajas.destruccion = true
 	controlcajas.reset_data()
+	controlcajas.tiempoTranscurrido = 0
 	var timer = Timer.new()
 	timer.wait_time = 10
 	timer.one_shot = true

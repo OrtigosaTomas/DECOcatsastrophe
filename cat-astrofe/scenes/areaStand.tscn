@@ -14,11 +14,11 @@ collision_mask = 172
 script = ExtResource("1_7iyro")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=987466161]
-position = Vector2(0, 4.2)
+position = Vector2(0, 5.873333)
 shape = SubResource("RectangleShape2D_a2grd")
 
 [node name="debugB" type="Sprite2D" parent="." unique_id=301284049]
 modulate = Color(1, 0.18431373, 0.22745098, 0.19607843)
-position = Vector2(0.059999928, 0.43333334)
+position = Vector2(0, 0.5666666)
 scale = Vector2(0.003562636, 0.003207123)
 texture = ExtResource("2_a2grd")

@@ -18,7 +18,7 @@ func spawn_deco(categoria):
 		deco_instance.name = "decoFloor" + str(controlcajas.decoFc)
 		controlcajas.incFc()
 		cajaActiva = 0
-		anim.animation = "default_" + str(randi_range(1,17)) ; anim.play()
+		anim.animation = "default_" + str(randi_range(1,21)) ; anim.play()
 		get_parent().add_child(deco_instance)
 		controlcajas.spawn_scene()
 		self.queue_free()

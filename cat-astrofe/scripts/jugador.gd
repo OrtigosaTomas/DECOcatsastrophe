@@ -81,7 +81,10 @@ func _process(_delta):
 				grabbed_object = null
 
 	if grabbed_object != null and not grabbed_object.colocado:
-		grabbed_object.global_position = global_position + Vector2(50, -700)
+		if grabbed_object.name.begins_with("decoFloor"):
+			grabbed_object.global_position = global_position + Vector2(50, -850)
+		else:
+			grabbed_object.global_position = global_position + Vector2(50, -700)
 
 func _on_place_object(body, pos):
 	if pin_joint:

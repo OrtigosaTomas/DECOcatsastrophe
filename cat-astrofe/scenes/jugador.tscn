@@ -94,19 +94,19 @@ z_index = 10
 script = ExtResource("1_lhlt4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=401276990]
-position = Vector2(1.3959808, -283.05032)
+position = Vector2(4.395981, -309.05032)
 scale = Vector2(0.9021999, 0.9021999)
 sprite_frames = SubResource("SpriteFrames_qimn5")
 animation = &"corro"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1283497441]
 z_index = 5
-position = Vector2(11, -390.51257)
+position = Vector2(14, -416.51257)
 scale = Vector2(10.873716, 37.50405)
 shape = SubResource("RectangleShape2D_k64kw")
 
 [node name="grab_area" type="Area2D" parent="." unique_id=500454808]
-position = Vector2(-0.6040125, -122.050354)
+position = Vector2(2.3959885, -148.05035)
 scale = Vector2(1.1354237, 1.299418)
 collision_layer = 4
 collision_mask = 4
@@ -118,7 +118,7 @@ shape = SubResource("RectangleShape2D_lhlt4")
 debug_color = Color(0, 0.6509804, 0.09019608, 0.19607843)
 
 [node name="valid_place_area" type="Area2D" parent="." unique_id=1606693938]
-position = Vector2(-23, -487)
+position = Vector2(-20.000008, -513)
 scale = Vector2(0.2262783, 0.10532714)
 collision_layer = 4
 collision_mask = 4
@@ -132,9 +132,9 @@ shape = SubResource("RectangleShape2D_28edd")
 debug_color = Color(0.9647059, 0.050980393, 0.46666667, 0.17254902)
 
 [node name="CursorJointNode" type="Node2D" parent="." unique_id=457726096]
-position = Vector2(-29, -654)
+position = Vector2(-26, -680)
 
 [node name="pasos" type="AudioStreamPlayer2D" parent="." unique_id=1816900997]
 unique_name_in_owner = true
-position = Vector2(-6, -343)
+position = Vector2(-3, -369)
 stream = ExtResource("3_k64kw")

@@ -10,6 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://daqbdsdhpmchw" path="res://scenes/areaFloor.tscn" id="5_vtaks"]
 [ext_resource type="Texture2D" uid="uid://ti8ntpftvtjn" path="res://assets/sprites/deco-cat/static.png" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://dq1mndhn3ubhc" path="res://scripts/controlcaja.gd" id="6_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="11_kvuet"]
+[ext_resource type="Texture2D" uid="uid://1gah0alhcrxu" path="res://assets/controls/base.png" id="12_trtic"]
+[ext_resource type="Texture2D" uid="uid://dxyxp164mughh" path="res://assets/controls/stick.png" id="13_ir15t"]
+[ext_resource type="Texture2D" uid="uid://dtoocsucqyw85" path="res://assets/controls/btn IntPlace.png" id="14_rysoc"]
+[ext_resource type="Texture2D" uid="uid://dqro3yr6en4ek" path="res://assets/controls/btn IntPlace Pressed.png" id="15_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://xnomgum446i0" path="res://assets/controls/btn grab.png" id="16_264po"]
+[ext_resource type="Texture2D" uid="uid://duwkq7euec2sm" path="res://assets/controls/btn grab Pressed.png" id="17_1kice"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lbhrr"]
 distance = -8.0
@@ -68,6 +75,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5newe"]
+radius = 187.63
+
 [node name="Game" type="Node2D" unique_id=41755661]
 
 [node name="Ysort" type="Node2D" parent="." unique_id=1338991062]
@@ -90,10 +100,10 @@ position = Vector2(-36.99994, 460)
 scale = Vector2(1.0092943, 1.0092943)
 
 [node name="Camera2D" type="Camera2D" parent="Ysort/player" unique_id=1031723324]
-position = Vector2(0, -106.01466)
+position = Vector2(-6.04731e-05, -106.01466)
 zoom = Vector2(0.9, 0.9)
 limit_left = -1360
-limit_top = -250
+limit_top = -280
 limit_right = 1250
 limit_bottom = 970
 limit_smoothed = true
@@ -254,10 +264,53 @@ sprite_frames = SubResource("SpriteFrames_dinhu")
 animation = &"new_animation_1"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=968107568]
-offset = Vector2(-50, 100)
-transform = Transform2D(1, 0, 0, 1, -50, 100)
+offset = Vector2(0, 100)
+transform = Transform2D(1, 0, 0, 1, 0, 100)
 
 [node name="Timer" parent="CanvasLayer" unique_id=1402843872 instance=ExtResource("2_dinhu")]
 z_index = 30
 position = Vector2(142, -65.00001)
 scale = Vector2(0.6399988, 0.6399988)
+
+[node name="VirtualJoystick" parent="CanvasLayer" unique_id=912784726 instance=ExtResource("11_kvuet")]
+modulate = Color(1, 1, 1, 0.6666667)
+offset_left = 581.0
+offset_top = 619.0
+offset_right = 581.0
+offset_bottom = 619.0
+mode = 1
+boundary = 1.0
+deadzone = 0.27
+dynamic_area_left_margin = 0.03
+dynamic_area_top_margin = 0.218
+dynamic_area_right_margin = 0.453
+dynamic_area_bottom_margin = 0.912
+base_texture = ExtResource("12_trtic")
+stick_texture = ExtResource("13_ir15t")
+joystick_scale = 1.5
+action_left = &"izq"
+action_up = &"arriba"
+action_right = &"der"
+action_down = &"abajo"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer" unique_id=1644485915]
+modulate = Color(1, 1, 1, 0.6666667)
+position = Vector2(1542.9999, 723)
+scale = Vector2(0.4338475, 0.4338475)
+texture_normal = ExtResource("14_rysoc")
+texture_pressed = ExtResource("15_ssvqc")
+shape = SubResource("CircleShape2D_5newe")
+shape_visible = false
+action = "interact"
+visibility_mode = 1
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer" unique_id=2120413127]
+modulate = Color(1, 1, 1, 0.6666667)
+position = Vector2(1714, 560)
+scale = Vector2(0.43384692, 0.43384692)
+texture_normal = ExtResource("16_264po")
+texture_pressed = ExtResource("17_1kice")
+shape = SubResource("CircleShape2D_5newe")
+shape_visible = false
+action = "grab"
+visibility_mode = 1

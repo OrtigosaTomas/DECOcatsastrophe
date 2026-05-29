@@ -257,17 +257,12 @@ scale = Vector2(0.6553632, 0.60127044)
 texture = ExtResource("2_v86rl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=8774793]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.23600002
-anchor_right = 0.79700005
-anchor_bottom = 1.0
-offset_left = 303.6283
-offset_top = 405.0
-offset_right = 2097.5327
-offset_bottom = 1587.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_direction = 2
+layout_mode = 0
+offset_left = 755.662
+offset_top = 381.18488
+offset_right = 3563.662
+offset_bottom = 3019.4346
 scale = Vector2(0.16000003, 0.16000003)
 alignment = 1
 
@@ -287,7 +282,7 @@ icon = ExtResource("5_70i5f")
 flat = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2039610825]
-position = Vector2(981.00006, 217)
+position = Vector2(970.662, 219.18488)
 scale = Vector2(0.73384684, 0.73384684)
 sprite_frames = SubResource("SpriteFrames_0ndyk")
 autoplay = "default"
@@ -297,14 +292,14 @@ frame_progress = 0.40295804
 position = Vector2(979, 390)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1836098263]
-position = Vector2(1627, 510.00003)
+position = Vector2(1621.0001, 510)
 scale = Vector2(0.39999998, 0.39999998)
 sprite_frames = SubResource("SpriteFrames_6cdou")
 autoplay = "default"
 frame_progress = 0.8551508
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=1902143069]
-position = Vector2(358, 507)
+position = Vector2(358, 559)
 scale = Vector2(0.88, 0.88)
 sprite_frames = SubResource("SpriteFrames_ruys5")
 autoplay = "default"

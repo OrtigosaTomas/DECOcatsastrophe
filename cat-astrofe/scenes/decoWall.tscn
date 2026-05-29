@@ -81,9 +81,45 @@ region = Rect2(1386, 6039, 462, 671)
 atlas = ExtResource("1_1wwvk")
 region = Rect2(1386, 6710, 462, 671)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcier"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(5082, 6710, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt8xk"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(3696, 5368, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdauy"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(4620, 0, 462, 671)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ey1xc"]
 atlas = ExtResource("1_1wwvk")
 region = Rect2(3234, 6039, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpn5r"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(5082, 6039, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h0gv"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(5082, 0, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_augpu"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(4158, 0, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbejj"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(3696, 671, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jb1j"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(4620, 671, 462, 671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqnot"]
+atlas = ExtResource("1_1wwvk")
+region = Rect2(4158, 671, 462, 671)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxj6h"]
 atlas = ExtResource("1_1wwvk")
@@ -265,10 +301,108 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_lcier")
+}],
+"loop": true,
+"name": &"default_27",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt8xk")
+}],
+"loop": true,
+"name": &"default_28",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdauy")
+}],
+"loop": true,
+"name": &"default_29",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ey1xc")
 }],
 "loop": true,
 "name": &"default_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpn5r")
+}],
+"loop": true,
+"name": &"default_30",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h0gv")
+}],
+"loop": true,
+"name": &"default_31",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_augpu")
+}],
+"loop": true,
+"name": &"default_32",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbejj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jb1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqnot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jb1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqnot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jb1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqnot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jb1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqnot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbejj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbejj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbejj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbejj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbejj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbejj")
+}],
+"loop": true,
+"name": &"default_33",
 "speed": 5.0
 }, {
 "frames": [{
@@ -333,7 +467,8 @@ script = ExtResource("1_clijn")
 [node name="texturaDeco" type="AnimatedSprite2D" parent="." unique_id=1962884235]
 position = Vector2(-2, 0.5)
 sprite_frames = SubResource("SpriteFrames_q0gfu")
-animation = &"default_5"
+animation = &"default_33"
+frame_progress = 0.6207766
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1124746368]
 position = Vector2(3.8146973e-06, 0.5000076)
